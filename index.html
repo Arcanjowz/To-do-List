@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: rgb(36, 36, 36); color: white">
+    <main class="site-container">
+      <header class="site-header">
+        <h1 style="text-align: center">To-do List</h1>
+        <p class="subtitle" style="text-align: center">
+          Organize sua rotina sem stress.
+        </p>
+      </header>
+
+      <!-- Botão de adicionar tarefas -->
+      <section class="input-addtask">
+        <span>O que faremos hoje?</span>
+        <button
+          type="button"
+          id="btn-add"
+          class="btn btn-primary"
+          onclick="addTask()"
+        >
+          Adicionar Tarefa
+        </button>
+      </section>
+
+      <!-- Formulário de adição de tarefas -->
+      <form id="task-form" class="task-form">
+        <div class="task-form-content">
+          <label for="task-name">Nome da tarefa</label>
+          <input
+            type="text"
+            id="task-name"
+            name="name"
+            placeholder="Digite o nome da tarefa"
+          />
+          <label for="task-description">Descrição da tarefa</label>
+          <textarea
+            id="task-description"
+            name="description"
+            placeholder="Digite a descrição da tarefa"
+          ></textarea>
+          <label for="task-deadline">Prazo da tarefa</label>
+          <input type="date" id="task-deadline" name="deadline" />
+          <button type="button" class="btn btn-primary" onclick="submitTask()">
+            Criar Tarefa
+          </button>
+        </div>
+      </form>
+
+      <!-- Seção principal -->
+      <section class="tasks-cards">
+        <div id="empty-state" class="empty-state">
+          <svg class="empty-icon" stroke="currentColor" stroke-width="1.8">
+            <title>Lista de tarefas vazia</title>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <p class="empty-title">Tudo limpo por aqui!</p>
+          <p class="empty-desc">Adicione sua primeira tarefa para começar.</p>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+
+      <!-- Contar Tarefas e Limpar concluídas-->
+      <footer class="app-footer">
+        <button
+          type="button"
+          id="btn-clear"
+          class="btn btn-ghost"
+          onclick="removeCompletedTask()"
+        >
+          Limpar Concluídas
+        </button>
+        <span id="task-counter" class="task-counter">0 tarefas</span>
+        <button
+          type="button"
+          id="avaliation"
+          class="avaliation"
+          onclick="avaliateProject()"
+        >
+          Avalie o projeto
+        </button>
+        <button
+          type="button"
+          id="btn-clear-all"
+          class="btn btn-ghost"
+          onclick="removeAllTasks()"
+        >
+          Limpar Tudo
+        </button>
+      </footer>
+      <footer class="app-footer-bottom">
+        <span id="footer-text" class="footer-text"
+          >Developed with ❤️ by: Miguel and Mateus</span
+        >
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
