@@ -21,3 +21,5 @@ Just for transformation animations (the idea for the animations was mine!)
 Function removeAllTasks()/removecompletedTask -> As I said I'm new on JS and I couldn't find a way to code this part, so I used AI to give me help on some structures (All the JS me and my friend did!)
 
 <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/dea38b3d-2f11-42a6-bc6c-61caae49fd25" />
+
+<p align=center>Project Developt by Arcanjows and Mati-Limas</p>
